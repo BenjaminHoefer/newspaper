@@ -1,0 +1,140 @@
+@font-face {
+    font-family: "cormorantReg";
+    src: url(../assets/fonts/CormorantGaramond-Regular.woff2) format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "cormorantBold";
+    src: url(../assets/fonts/CormorantGaramond-Bold.woff2) format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+.body {
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(233, 233, 224);
+    width: 1400px;
+}
+
+.header__headline {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 6.5px double black;
+    border-top: 6.5px double black;
+}
+
+.header__div {
+    padding: 0 5vw;
+}
+
+.header__text {
+    margin: 0.5em 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "main__h2       main__h2       main__h2     main__h2     main__h3"
+        "main__article1 main__article2 main__figure main__figure main__aside1"
+        "main__article3 main__article4 main__figure main__figure main__aside1"
+        "main__article3 main__article4 main__figure main__figure main__aside2"
+        "main__article5 main__article6 main__figure main__figure main__aside2"
+        "main__article5 main__article6 main__figure main__figure main__aside3"
+        "main__article5 main__article6 main__figure main__figure main__aside3";
+    grid-area: grid-container__main;
+    gap: 20px;
+}
+
+.main__headline2 {
+    grid-area: main__h2;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.main__headline3 {
+    grid-area: main__h3;
+    text-align: center;
+}
+
+.main__article1 {
+    grid-area: main__article1;
+}
+
+.main__article2 {
+    grid-area: main__article2;
+}
+
+.main__article3 {
+    grid-area: main__article3;
+}
+
+.main__article4 {
+    grid-area: main__article4;
+}
+
+.main__article5 {
+    grid-area: main__article5;
+}
+
+.main__article6 {
+    grid-area: main__article6;
+}
+
+.article__headline {
+    margin: 0;
+}
+
+.article__text {
+    margin: 0;
+}
+
+.main__figure {
+    grid-area: main__figure;
+}
+
+.figure__img {
+    width: 100%;
+}
+
+.aside {
+    border: 6.5px double black;
+    width: 250px;
+    height: 250px;
+}
+
+.main__aside1 {
+    grid-area: main__aside1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.aside__headline {
+    margin: 0;
+}
+
+.main__aside2 {
+    grid-area: main__aside2;
+}
+
+.main__aside3 {
+    grid-area: main__aside3;
+}
+
+.aside__img {
+    width: 100%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
