@@ -29,7 +29,7 @@
     font-size: 2.75rem;
 }
 
-.flex-container {
+.flex-header {
     display: flex;
     justify-content: space-between;
     border-bottom: 6.5px double black;
@@ -47,15 +47,15 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 0.5fr repeat(6, 1fr);
     grid-template-areas:
-        "main__h2       main__h2       main__h2     main__h2     main__h3"
-        "main__article1 main__article2 main__figure main__figure main__aside1"
-        "main__article3 main__article4 main__figure main__figure main__aside1"
-        "main__article3 main__article4 main__figure main__figure main__aside2"
-        "main__article5 main__article6 main__figure main__figure main__aside2"
-        "main__article5 main__article6 main__figure main__figure main__aside3"
-        "main__article5 main__article6 main__figure main__figure main__aside3";
+        "main__h2       main__h2       main__h2     main__h2     main__aside"
+        "main__article1 main__article2 main__figure main__figure main__aside"
+        "main__article3 main__article4 main__figure main__figure main__aside"
+        "main__article3 main__article4 main__figure main__figure main__aside"
+        "main__article5 main__article6 main__figure main__figure main__aside"
+        "main__article5 main__article6 main__figure main__figure main__aside"
+        "main__article5 main__article6 main__figure main__figure main__aside";
     grid-area: grid-container__main;
     gap: 20px;
 }
@@ -64,11 +64,7 @@
     grid-area: main__h2;
     text-align: center;
     font-size: 2.5rem;
-}
-
-.main__headline3 {
-    grid-area: main__h3;
-    text-align: center;
+    margin: 10px 0;
 }
 
 .main__article1 {
@@ -112,8 +108,23 @@
     grid-area: main__figure;
 }
 
+.figure {
+    margin: 0;
+}
+
 .figure__img {
     width: 100%;
+}
+
+.figure__figcaption {
+    font-style: italic;
+}
+
+.flex-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .aside {
@@ -122,8 +133,11 @@
     height: 250px;
 }
 
+.main__aside {
+    grid-area: main__aside;
+}
+
 .main__aside1 {
-    grid-area: main__aside1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,7 +150,6 @@
 }
 
 .main__aside2 {
-    grid-area: main__aside2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,10 +163,6 @@
 
 .aside__link {
     color: #333;
-}
-
-.main__aside3 {
-    grid-area: main__aside3;
 }
 
 .aside__img {
